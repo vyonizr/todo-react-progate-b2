@@ -1,11 +1,11 @@
 import TodoItem from './TodoItem'
 
-function Todos({ todos }) {
+function Todos({ todos, toggleCompleted }) {
   return (
     <div style={styles.container}>
       {
         todos.map((todo) => (
-          <TodoItem key={todo.id} todo={todo} />
+          <TodoItem key={todo.id} todo={todo} toggleCompleted={toggleCompleted} />
         ))
       }
     </div>
