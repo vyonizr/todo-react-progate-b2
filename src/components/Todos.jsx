@@ -1,6 +1,6 @@
 import TodoItem from './TodoItem'
 
-function Todos({ todos, toggleCompleted, deleteTodo }) {
+function Todos({ todos }) {
   return (
     <div style={styles.container}>
       {
@@ -8,8 +8,6 @@ function Todos({ todos, toggleCompleted, deleteTodo }) {
           <TodoItem
             key={todo.id}
             todo={todo}
-            toggleCompleted={toggleCompleted}
-            deleteTodo={deleteTodo}
           />
         ))
       }

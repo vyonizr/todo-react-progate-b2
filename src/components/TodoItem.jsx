@@ -1,4 +1,10 @@
-export default function TodoItem({ todo, toggleCompleted, deleteTodo }) {
+import { useContext } from "react"
+
+import { TodoContext } from '../App'
+
+export default function TodoItem({ todo }) {
+  const { toggleCompleted, deleteTodo } = useContext(TodoContext)
+
   const getTodoTitleStyle = () => {
     if (todo.completed) {
       return {
